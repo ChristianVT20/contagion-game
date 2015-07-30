@@ -4,6 +4,7 @@ Personal proyect for practice HTML and Javascript.
 A mini-game developed using HTML5 - CSS3 - Javascript - JQuery - Bootstrap.
 
 
+Demo: http://christianvt20.github.io/contagion-game/
 
 
 Sprites:
