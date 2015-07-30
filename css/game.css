@@ -13,6 +13,7 @@ body{
 	background-repeat: repeat;
 	size: cover;
 	font-family: aileron-light;
+	display:none;
 }
 #volume-slider{
 	width: 120px;
