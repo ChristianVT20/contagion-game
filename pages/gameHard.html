@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Braiiiins!</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="icon" href="../images/zombie-green.png" type="image/png" sizes="16x16">
+	<link rel="stylesheet" href="../css/game.css">	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+
+	<section id="main">
+		<div id="volume-slider">
+			<h3> <span class="glyphicon glyphicon-volume-up"></span></h3>
+			<input  id="volume" type="range" min="0" max="100" step="10" />
+		</div>
+		<section id="score_panel">
+			
+			<div class="media">
+				<h3>SCORE</h3>
+				<div id="score">
+					<h3>0</h3>
+				</div>
+				<hr>
+				<h3>Infected</h3>
+				<br>
+				<div class="media-left">
+					<a href=""><img src="../images/characters/gv.png" alt=""></a>
+				</div>
+				<div class="media-body media-middle">
+					<span>
+						<h4>
+							0/256
+						</h4>
+					</span>
+				</div>
+			</div>
+		</section>
+		<section id="board" oncontextmenu="return false;">
+			<div class="yAxis">
+				<div class="tile healthy" id="1-1"></div>
+				<div class="tile healthy" id="1-2"></div>
+				<div class="tile healthy" id="1-3"></div>
+				<div class="tile healthy" id="1-4"></div>
+				<div class="tile healthy" id="1-5"></div>
+				<div class="tile healthy" id="1-6"></div>
+				<div class="tile healthy" id="1-7"></div>
+				<div class="tile healthy" id="1-8"></div>
+				<div class="tile healthy" id="1-9"></div>
+				<div class="tile healthy" id="1-10"></div>
+				<div class="tile healthy" id="1-11"></div>
+				<div class="tile healthy" id="1-12"></div>
+				<div class="tile healthy" id="1-13"></div>
+				<div class="tile healthy" id="1-14"></div>
+				<div class="tile healthy" id="1-15"></div>
+				<div class="tile healthy" id="1-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="2-1"></div>
+				<div class="tile healthy" id="2-2"></div>
+				<div class="tile healthy" id="2-3"></div>
+				<div class="tile healthy" id="2-4"></div>
+				<div class="tile healthy" id="2-5"></div>
+				<div class="tile healthy" id="2-6"></div>
+				<div class="tile healthy" id="2-7"></div>
+				<div class="tile healthy" id="2-8"></div>
+				<div class="tile healthy" id="2-9"></div>
+				<div class="tile healthy" id="2-10"></div>
+				<div class="tile healthy" id="2-11"></div>
+				<div class="tile healthy" id="2-12"></div>
+				<div class="tile healthy" id="2-13"></div>
+				<div class="tile healthy" id="2-14"></div>
+				<div class="tile healthy" id="2-15"></div>
+				<div class="tile healthy" id="2-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="3-1"></div>
+				<div class="tile healthy" id="3-2"></div>
+				<div class="tile healthy" id="3-3"></div>
+				<div class="tile healthy" id="3-4"></div>
+				<div class="tile healthy" id="3-5"></div>
+				<div class="tile healthy" id="3-6"></div>
+				<div class="tile healthy" id="3-7"></div>
+				<div class="tile healthy" id="3-8"></div>
+				<div class="tile healthy" id="3-9"></div>
+				<div class="tile healthy" id="3-10"></div>
+				<div class="tile healthy" id="3-11"></div>
+				<div class="tile healthy" id="3-12"></div>
+				<div class="tile healthy" id="3-13"></div>
+				<div class="tile healthy" id="3-14"></div>
+				<div class="tile healthy" id="3-15"></div>
+				<div class="tile healthy" id="3-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="4-1"></div>
+				<div class="tile healthy" id="4-2"></div>
+				<div class="tile healthy" id="4-3"></div>
+				<div class="tile healthy" id="4-4"></div>
+				<div class="tile healthy" id="4-5"></div>
+				<div class="tile healthy" id="4-6"></div>
+				<div class="tile healthy" id="4-7"></div>
+				<div class="tile healthy" id="4-8"></div>
+				<div class="tile healthy" id="4-9"></div>
+				<div class="tile healthy" id="4-10"></div>
+				<div class="tile healthy" id="4-11"></div>
+				<div class="tile healthy" id="4-12"></div>
+				<div class="tile healthy" id="4-13"></div>
+				<div class="tile healthy" id="4-14"></div>
+				<div class="tile healthy" id="4-15"></div>
+				<div class="tile healthy" id="4-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="5-1"></div>
+				<div class="tile healthy" id="5-2"></div>
+				<div class="tile healthy" id="5-3"></div>
+				<div class="tile healthy" id="5-4"></div>
+				<div class="tile healthy" id="5-5"></div>
+				<div class="tile healthy" id="5-6"></div>
+				<div class="tile healthy" id="5-7"></div>
+				<div class="tile healthy" id="5-8"></div>
+				<div class="tile healthy" id="5-9"></div>
+				<div class="tile healthy" id="5-10"></div>
+				<div class="tile healthy" id="5-11"></div>
+				<div class="tile healthy" id="5-12"></div>
+				<div class="tile healthy" id="5-13"></div>
+				<div class="tile healthy" id="5-14"></div>
+				<div class="tile healthy" id="5-15"></div>
+				<div class="tile healthy" id="5-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="6-1"></div>
+				<div class="tile healthy" id="6-2"></div>
+				<div class="tile healthy" id="6-3"></div>
+				<div class="tile healthy" id="6-4"></div>
+				<div class="tile healthy" id="6-5"></div>
+				<div class="tile healthy" id="6-6"></div>
+				<div class="tile healthy" id="6-7"></div>
+				<div class="tile healthy" id="6-8"></div>
+				<div class="tile healthy" id="6-9"></div>
+				<div class="tile healthy" id="6-10"></div>
+				<div class="tile healthy" id="6-11"></div>
+				<div class="tile healthy" id="6-12"></div>
+				<div class="tile healthy" id="6-13"></div>
+				<div class="tile healthy" id="6-14"></div>
+				<div class="tile healthy" id="6-15"></div>
+				<div class="tile healthy" id="6-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="7-1"></div>
+				<div class="tile healthy" id="7-2"></div>
+				<div class="tile healthy" id="7-3"></div>
+				<div class="tile healthy" id="7-4"></div>
+				<div class="tile healthy" id="7-5"></div>
+				<div class="tile healthy" id="7-6"></div>
+				<div class="tile healthy" id="7-7"></div>
+				<div class="tile healthy" id="7-8"></div>
+				<div class="tile healthy" id="7-9"></div>
+				<div class="tile healthy" id="7-10"></div>
+				<div class="tile healthy" id="7-11"></div>
+				<div class="tile healthy" id="7-12"></div>
+				<div class="tile healthy" id="7-13"></div>
+				<div class="tile healthy" id="7-14"></div>
+				<div class="tile healthy" id="7-15"></div>
+				<div class="tile healthy" id="7-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="8-1"></div>
+				<div class="tile healthy" id="8-2"></div>
+				<div class="tile healthy" id="8-3"></div>
+				<div class="tile healthy" id="8-4"></div>
+				<div class="tile healthy" id="8-5"></div>
+				<div class="tile healthy" id="8-6"></div>
+				<div class="tile healthy" id="8-7"></div>
+				<div class="tile healthy" id="8-8"></div>
+				<div class="tile healthy" id="8-9"></div>
+				<div class="tile healthy" id="8-10"></div>
+				<div class="tile healthy" id="8-11"></div>
+				<div class="tile healthy" id="8-12"></div>
+				<div class="tile healthy" id="8-13"></div>
+				<div class="tile healthy" id="8-14"></div>
+				<div class="tile healthy" id="8-15"></div>
+				<div class="tile healthy" id="8-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="9-1"></div>
+				<div class="tile healthy" id="9-2"></div>
+				<div class="tile healthy" id="9-3"></div>
+				<div class="tile healthy" id="9-4"></div>
+				<div class="tile healthy" id="9-5"></div>
+				<div class="tile healthy" id="9-6"></div>
+				<div class="tile healthy" id="9-7"></div>
+				<div class="tile healthy" id="9-8"></div>
+				<div class="tile healthy" id="9-9"></div>
+				<div class="tile healthy" id="9-10"></div>
+				<div class="tile healthy" id="9-11"></div>
+				<div class="tile healthy" id="9-12"></div>
+				<div class="tile healthy" id="9-13"></div>
+				<div class="tile healthy" id="9-14"></div>
+				<div class="tile healthy" id="9-15"></div>
+				<div class="tile healthy" id="9-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="10-1"></div>
+				<div class="tile healthy" id="10-2"></div>
+				<div class="tile healthy" id="10-3"></div>
+				<div class="tile healthy" id="10-4"></div>
+				<div class="tile healthy" id="10-5"></div>
+				<div class="tile healthy" id="10-6"></div>
+				<div class="tile healthy" id="10-7"></div>
+				<div class="tile healthy" id="10-8"></div>
+				<div class="tile healthy" id="10-9"></div>
+				<div class="tile healthy" id="10-10"></div>
+				<div class="tile healthy" id="10-11"></div>
+				<div class="tile healthy" id="10-12"></div>
+				<div class="tile healthy" id="10-13"></div>
+				<div class="tile healthy" id="10-14"></div>
+				<div class="tile healthy" id="10-15"></div>
+				<div class="tile healthy" id="10-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="11-1"></div>
+				<div class="tile healthy" id="11-2"></div>
+				<div class="tile healthy" id="11-3"></div>
+				<div class="tile healthy" id="11-4"></div>
+				<div class="tile healthy" id="11-5"></div>
+				<div class="tile healthy" id="11-6"></div>
+				<div class="tile healthy" id="11-7"></div>
+				<div class="tile healthy" id="11-8"></div>
+				<div class="tile healthy" id="11-9"></div>
+				<div class="tile healthy" id="11-10"></div>
+				<div class="tile healthy" id="11-11"></div>
+				<div class="tile healthy" id="11-12"></div>
+				<div class="tile healthy" id="11-13"></div>
+				<div class="tile healthy" id="11-14"></div>
+				<div class="tile healthy" id="11-15"></div>
+				<div class="tile healthy" id="11-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="12-1"></div>
+				<div class="tile healthy" id="12-2"></div>
+				<div class="tile healthy" id="12-3"></div>
+				<div class="tile healthy" id="12-4"></div>
+				<div class="tile healthy" id="12-5"></div>
+				<div class="tile healthy" id="12-6"></div>
+				<div class="tile healthy" id="12-7"></div>
+				<div class="tile healthy" id="12-8"></div>
+				<div class="tile healthy" id="12-9"></div>
+				<div class="tile healthy" id="12-10"></div>
+				<div class="tile healthy" id="12-11"></div>
+				<div class="tile healthy" id="12-12"></div>
+				<div class="tile healthy" id="12-13"></div>
+				<div class="tile healthy" id="12-14"></div>
+				<div class="tile healthy" id="12-15"></div>
+				<div class="tile healthy" id="12-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="13-1"></div>
+				<div class="tile healthy" id="13-2"></div>
+				<div class="tile healthy" id="13-3"></div>
+				<div class="tile healthy" id="13-4"></div>
+				<div class="tile healthy" id="13-5"></div>
+				<div class="tile healthy" id="13-6"></div>
+				<div class="tile healthy" id="13-7"></div>
+				<div class="tile healthy" id="13-8"></div>
+				<div class="tile healthy" id="13-9"></div>
+				<div class="tile healthy" id="13-10"></div>
+				<div class="tile healthy" id="13-11"></div>
+				<div class="tile healthy" id="13-12"></div>
+				<div class="tile healthy" id="13-13"></div>
+				<div class="tile healthy" id="13-14"></div>
+				<div class="tile healthy" id="13-15"></div>
+				<div class="tile healthy" id="13-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="14-1"></div>
+				<div class="tile healthy" id="14-2"></div>
+				<div class="tile healthy" id="14-3"></div>
+				<div class="tile healthy" id="14-4"></div>
+				<div class="tile healthy" id="14-5"></div>
+				<div class="tile healthy" id="14-6"></div>
+				<div class="tile healthy" id="14-7"></div>
+				<div class="tile healthy" id="14-8"></div>
+				<div class="tile healthy" id="14-9"></div>
+				<div class="tile healthy" id="14-10"></div>
+				<div class="tile healthy" id="14-11"></div>
+				<div class="tile healthy" id="14-12"></div>
+				<div class="tile healthy" id="14-13"></div>
+				<div class="tile healthy" id="14-14"></div>
+				<div class="tile healthy" id="14-15"></div>
+				<div class="tile healthy" id="14-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="15-1"></div>
+				<div class="tile healthy" id="15-2"></div>
+				<div class="tile healthy" id="15-3"></div>
+				<div class="tile healthy" id="15-4"></div>
+				<div class="tile healthy" id="15-5"></div>
+				<div class="tile healthy" id="15-6"></div>
+				<div class="tile healthy" id="15-7"></div>
+				<div class="tile healthy" id="15-8"></div>
+				<div class="tile healthy" id="15-9"></div>
+				<div class="tile healthy" id="15-10"></div>
+				<div class="tile healthy" id="15-11"></div>
+				<div class="tile healthy" id="15-12"></div>
+				<div class="tile healthy" id="15-13"></div>
+				<div class="tile healthy" id="15-14"></div>
+				<div class="tile healthy" id="15-15"></div>
+				<div class="tile healthy" id="15-16"></div>
+			</div>
+			<div class="yAxis">
+				<div class="tile healthy" id="16-1"></div>
+				<div class="tile healthy" id="16-2"></div>
+				<div class="tile healthy" id="16-3"></div>
+				<div class="tile healthy" id="16-4"></div>
+				<div class="tile healthy" id="16-5"></div>
+				<div class="tile healthy" id="16-6"></div>
+				<div class="tile healthy" id="16-7"></div>
+				<div class="tile healthy" id="16-8"></div>
+				<div class="tile healthy" id="16-9"></div>
+				<div class="tile healthy" id="16-10"></div>
+				<div class="tile healthy" id="16-11"></div>
+				<div class="tile healthy" id="16-12"></div>
+				<div class="tile healthy" id="16-13"></div>
+				<div class="tile healthy" id="16-14"></div>
+				<div class="tile healthy" id="16-15"></div>
+				<div class="tile healthy" id="16-16"></div>
+			</div>
+		</section>
+		<section id="bonus_panel">
+			<div id="bonus1">
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href=""><img src="../images/characters/yz.png" alt=""></a>
+					</div>
+					<div class="media-body media-middle"><p>Combo x 4</p></span></div>
+				</div>
+			</div>
+			<div id="bonus2">
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href=""><img src="../images/characters/bz.png" alt=""></a>
+					</div>
+					<div class="media-body  media-middle"><span><p>Combo x 5</p></span></div>
+				</div>
+			</div>
+			<div id="bonus3">
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href=""><img  src="../images/characters/pz.png" alt=""></a>
+					</div>
+					<div class="media-body  media-middle"><span><p>Combo x 6</p></span></div>
+				</div>
+			</div>
+			<div id="bonus4">
+				<div class="media">
+					<div class="media-left media-middle">
+						<a href=""><img src="../images/characters/rz.png" alt=""></a>
+					</div>
+					<div class="media-body  media-middle"><span><p>Combo x 7+</p></span></div>
+				</div>
+			</div>
+		</section>
+	</section>
+
+	<div class="container">
+		<div class="modal fade" id="ventana2">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">TUTORIAL</h1>
+					</div>
+					<div class="modal-body">
+						<div id="carousel-1" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-1" data-slide-to="0" class="active"></li>
+								<li data-target="#carousel-1" data-slide-to="1"></li>
+								<li data-target="#carousel-1" data-slide-to="2"></li>
+								<li data-target="#carousel-1" data-slide-to="3"></li>
+								<li data-target="#carousel-1" data-slide-to="4"></li>
+							</ol>
+							<!-- Contenedor de imágenes -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="../images/tutorial/1.png" alt="" class="img-responsive">
+									<div class="carousel-caption hidden-xs hidden-sm">
+										<h4>You can infect victims when they are left, right, over or under to a Zombie.</h4>
+									</div>
+								</div>
+								<div class="item">
+									<img src="../images/tutorial/2.png" alt="" class="img-responsive">
+									<div class="carousel-caption hidden-xs hidden-sm">
+										<h4>In this case we have a group of victims of the same color. If you click one of them...</h4>
+									</div>
+								</div>
+								<div class="item">
+									<img src="../images/tutorial/3.png" alt="" class="img-responsive">
+									<div class="carousel-caption hidden-xs hidden-sm">
+										<h4>A special Zombie appears and if you click him...</h4>
+									</div>
+								</div>
+								<div class="item">
+									<img src="../images/tutorial/4.png" alt="" class="img-responsive">
+									<div class="carousel-caption hidden-xs hidden-sm">
+										<h4>The Zombie infects victims around him and give you a lot of points.</h4>
+									</div>
+								</div>
+								<div class="item">
+									<img src="../images/tutorial/5.png" alt="" class="img-responsive">
+									<div class="carousel-caption hidden-xs hidden-sm">
+										<h4>The objective is to infect all the victims.</h4>
+									</div>
+								</div>
+							</div>
+							<!-- Controles del carousel -->
+							<a href="#carousel-1" class="left carousel-control" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Anterior</span>
+							</a>
+							<a href="#carousel-1" class="right carousel-control" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Siguiente</span>
+							</a>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="modal fade" id="ventana1">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h1 class="modal-title">THE VIRUS WAS SPREAD!</h1>
+					</div>
+					<div class="modal-body">
+						<h2></h2>
+						<div id="hits">
+							<h4></h4>
+						</div>
+						<div id="average">
+							<h4></h4>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<a href="../index.html" class="btn btn-warning" role="button">ACCEPT</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="../js/gameH.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+@font-face {
+  font-family: aileron-light;
+  src: url(../fonts/aileron/Aileron-Light.otf);
+}
+html, body {
+	margin:0;
+	padding:0;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	background: url('../images/background/zombie-background-2.png');
+	background-repeat: repeat;
+	size: cover;
+	font-family: aileron-light;
+}
+#volume-slider{
+	width: 120px;
+	position: fixed;
+	margin: 0;
+	padding: 0;
+
+}
+#volume-slider h3{
+	text-align: center;
+}
+#main {
+	width: 100vw;
+	height: 100vh;
+	font-family: aileron-light;
+	display: -webkit-flex;
+  	display: -ms-flex;
+  	display: flex;
+  	flex-direction:row;
+  	justify-content:center;
+  	align-items:center;
+}
+/*
+* ________________________________ BOARD ________________________________
+*/
+#board {
+	width: 640px;
+	height: 640px;	
+	background: #000;
+}
+.yAxis{
+	display: -webkit-flex;
+  	display: -ms-flex;
+  	display: flex;
+}
+.tile{
+	margin: 0;
+	padding: 0;
+	width:40px;
+	height:40px;
+	display: inline-block;
+}
+/*
+* ________________________________ BONUS' PANEL ________________________________
+*/
+#bonus_panel {
+	width: 15%;
+	height: 55%;
+	background: #fff;
+	padding-left: 0;
+	margin-left: 15px; 
+	color: #fff;
+	background: #000;
+	-webkit-border-radius: 15px;
+  	-moz-border-radius: 15px;
+ 	border-radius: 15px;
+
+	display: -webkit-flex;
+  	display: -ms-flex;
+  	display: flex;
+  	flex-direction:column;
+  	justify-content:space-around;
+  	align-items:center;
+}
+.media-body{
+	text-align: center;
+}
+.media-left{
+	padding: 3px;
+}
+#score_panel .media .media-left img, #bonus1 .media .media-left img,#bonus2 .media .media-left img,
+#bonus3 .media .media-left img, #bonus4 .media .media-left img{
+	cursor: default;
+	pointer-events: none;
+}
+/*
+* ________________________________ SCORE'S PANEL ________________________________
+*/
+#score_panel {
+	width: 15%;
+	height: 38%;
+	background: #fff;
+	margin-right: 15px;
+  	color: #fff;
+  	background: #000;
+	-webkit-border-radius: 15px;
+  	-moz-border-radius: 15px;
+  	border-radius: 15px;
+
+
+  	display: -webkit-flex;
+  	display: -ms-flex;
+  	display: flex;
+}
+#score_panel .media h2, #score_panel .media h3{
+	text-align: center;
+}
+/*
+* ________________________________ VICTIM'S CLASES ________________________________
+*/
+.blue_victim{
+	background: url('../images/characters/bv.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.green_victim{
+	background: url('../images/characters/gv.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.orange_victim{
+	background: url('../images/characters/ov.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.purple_victim{
+	background: url('../images/characters/pv.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.red_victim{
+	background: url('../images/characters/rv.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.yellow_victim{
+	background: url('../images/characters/yv.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+
+/*
+* ________________________________ ZOMBIE'S CLASES ________________________________
+*/
+.blue_zombie{
+	background: url('../images/characters/bz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.green_zombie{
+	background: url('../images/characters/gz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.orange_zombie{
+	background: url('../images/characters/oz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.purple_zombie{
+	background: url('../images/characters/pz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.red_zombie{
+	background: url('../images/characters/rz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+.yellow_zombie{
+	background: url('../images/characters/yz.png');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;;
+}
+/*
+* ________________________________ MODAL WINDOW ________________________________
+*/
+.modal{
+	background: url('../images/background/zombie-background-1.png');
+	background-repeat: repeat;
+	size: cover;
+	font-family: aileron-light;
+}
+.modal-content{
+	text-align: center;
+}
+.modal-header, .modal-body,.modal-footer{
+	background: #000;
+	color: #fff;
+	border-bottom: 0px;
+	text-align: center;
+}
+
+.modal-footer{
+	margin: 0 auto;
+}
