@@ -9,6 +9,9 @@ function main(){
 	hits = 1;
 	infected_counter = 1;
 	victims_counter = [];
+	normal_Audio = [];
+	special_Audio =[];
+	PreLoadAudio();
 	score = 0;
 	init();
 	mouseEvents();
@@ -250,41 +253,47 @@ function refresh(newInfectedCounter, newScore){
     	playAudio(5);
     }
 }
+/*Charging audio*/
+function PreLoadAudio(){
+	for (var i = 0; i < 21; i++) {
+		normal_Audio[i] = new Audio('../audio/zombie-'+i+'.wav');
+	};
+	special_Audio[0] = new Audio('../audio/Carnage.wav');
+	special_Audio[1] = new Audio('../audio/MegaKill.wav');
+	special_Audio[2] = new Audio('../audio/KillingSpree.wav');
+	special_Audio[3] = new Audio('../audio/Massacre.wav');
+	special_Audio[4] = new Audio('../audio/applause.wav');
+}
 /*
 * This function activates the audio according to the event that is presenting
 */
 function playAudio(type){
-	var audio;
+	var randomSound;
 	switch(type){
 		case 0:
-			audio = new Audio('../audio/zombie-'+(Math.floor(Math.random() * 20))+'.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			randomSound = Math.floor(Math.random() * 19);
+			normal_Audio[randomSound].volume = parseInt($('#volume').val())/100;
+			normal_Audio[randomSound].play();
 		break;
 		case 1:
-			audio = new Audio('../audio/Carnage.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			special_Audio[0].volume = parseInt($('#volume').val())/100;
+			special_Audio[0].play();
 		break;
 		case 2:
-			audio = new Audio('../audio/MegaKill.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			special_Audio[1].volume = parseInt($('#volume').val())/100;
+			special_Audio[1].play();
 		break;
 		case 3:
-			audio = new Audio('../audio/KillingSpree.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			special_Audio[2].volume = parseInt($('#volume').val())/100;
+			special_Audio[2].play();
 		break;
 		case 4:
-			audio = new Audio('../audio/Massacre.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			special_Audio[3].volume = parseInt($('#volume').val())/100;
+			special_Audio[3].play();
 		break;
 		case 5:
-			audio = new Audio('../audio/applause.wav');
-			audio.volume = parseInt($('#volume').val())/100;
-			audio.play();
+			special_Audio[4].volume = parseInt($('#volume').val())/100;
+			special_Audio[4].play();
 		break;
 	}
 }
