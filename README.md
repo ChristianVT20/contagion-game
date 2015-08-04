@@ -1,7 +1,6 @@
 # Contagion (beta)
 
-Personal proyect for practice HTML and Javascript.
-A mini-game developed using HTML5 - CSS3 - Javascript - JQuery - Bootstrap.
+This is a Personal proyect for practice HTML5, CSS3, Javascript, JQuery and Bootstrap.
 
 
 Demo: http://christianvt20.github.io/contagion-game/
