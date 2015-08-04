@@ -6,6 +6,10 @@ html, body {
 	margin:0;
 	padding:0;
 }
+a:link{
+	text-decoration: none;
+	outline: 0;
+}
 body{
 	width: 100vw;
 	height: 100vh;
@@ -15,12 +19,14 @@ body{
 	font-family: aileron-light;
 	display:none;
 }
+header{
+	width: 100%;
+}
 #volume-slider{
 	width: 120px;
 	position: fixed;
-	margin: 0;
-	padding: 0;
-
+	margin: auto;
+	padding: 5px;
 }
 #volume-slider h3{
 	text-align: center;
@@ -32,9 +38,9 @@ body{
 	display: -webkit-flex;
   	display: -ms-flex;
   	display: flex;
-  	flex-direction:row;
-  	justify-content:center;
-  	align-items:center;
+  	flex-flow: row wrap;
+  	justify-content: center;
+  	align-items: center;
 }
 /*
 * ________________________________ BOARD ________________________________
@@ -48,6 +54,7 @@ body{
 	display: -webkit-flex;
   	display: -ms-flex;
   	display: flex;
+
 }
 .tile{
 	margin: 0;
@@ -60,8 +67,8 @@ body{
 * ________________________________ BONUS' PANEL ________________________________
 */
 #bonus_panel {
-	width: 15%;
-	height: 55%;
+	width: 150px;
+	height: 200px;
 	background: #fff;
 	padding-left: 0;
 	margin-left: 15px; 
@@ -70,19 +77,12 @@ body{
 	-webkit-border-radius: 15px;
   	-moz-border-radius: 15px;
  	border-radius: 15px;
-
-	display: -webkit-flex;
-  	display: -ms-flex;
-  	display: flex;
-  	flex-direction:column;
-  	justify-content:space-around;
-  	align-items:center;
 }
 .media-body{
 	text-align: center;
 }
 .media-left{
-	padding: 3px;
+	padding: 5px 0 5px 15px;
 }
 #score_panel .media .media-left img, #bonus1 .media .media-left img,#bonus2 .media .media-left img,
 #bonus3 .media .media-left img, #bonus4 .media .media-left img{
@@ -181,10 +181,13 @@ body{
 /*
 * ________________________________ MODAL WINDOW ________________________________
 */
-.modal{
+#ventana1{
 	background: url('../images/background/zombie-background-1.png');
 	background-repeat: repeat;
 	size: cover;
+	font-family: aileron-light;
+}
+#ventana2{
 	font-family: aileron-light;
 }
 .modal-content{

@@ -1,11 +1,3 @@
-@font-face {
-  font-family: ailerons;
-  src: url(../fonts/ailerons/Ailerons.ttf);
-}
-@font-face {
-  font-family: aileron-light;
-  src: url(../fonts/aileron/Aileron-Light.otf);
-}
 html, body{
 	padding: 0;
 	margin: 0;	
@@ -18,7 +10,6 @@ body{
 body p{
 	position: absolute;
 	color: #fff;
-	font-family: aileron-light;
 }
 canvas{
 	outline: 1px solid #000;
@@ -27,7 +18,7 @@ canvas{
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	font-family: 'Jolly Lodger', aileron-light;
+	font-family: 'Jolly Lodger', helvetica;
 	/*FLEX*/
 	display: -webkit-flex;
   	display: -ms-flex;
@@ -47,9 +38,25 @@ canvas{
 	font-size: 3em;
 	color: #F7D358;
 }
+
+.modal-dialog{
+	font-family: 'Jolly Lodger' , helvetica;
+	border: solid 5px #FAAC58;
+	background: rgba(255,255,255,0.3);
+}
+
+.modal-header{
+	color: #000;
+	text-align: center;
+}
 .modal-body{
+	text-align: center;
 	color: #000;
 }
-.modal-title{
-	text-align: center;
+.modal-footer{
+	padding: auto;
+}
+
+#normal{
+	float: left;
 }

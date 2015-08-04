@@ -1,8 +1,9 @@
 $(window).load(main);
 
 function main(){
-	$("body").fadeIn('slow');
-	$('#ventana2').modal('show');
+	$("body").fadeIn('slow', function(){
+		$('#ventana2').modal('show');
+	});
 	$('.carousel').carousel({
   		interval: 700 * 10
 	});
